@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiniBrowserMirror — 지원</title>
+  <style>
+    :root{
+      --bg:#0f1115; --surface:#171a21; --text:#e7e9ee; --muted:#9aa3b2;
+      --accent:#5b8cff; --border:#262b36; --radius:14px;
+      --space:clamp(1.25rem,1rem+2vw,2.5rem);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);
+      font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;}
+    main{max-width:760px;margin:0 auto;padding:var(--space);}
+    a.back{color:var(--muted);text-decoration:none;font-size:.9rem}
+    a.back:hover{color:var(--accent)}
+    a{color:var(--accent)}
+    h1{font-size:clamp(1.6rem,1.2rem+2vw,2.4rem);margin:.5em 0 .1em;letter-spacing:-.02em}
+    p.meta{color:var(--muted);margin:0 0 2rem;font-size:.9rem}
+    h2{font-size:1.2rem;margin:2.2rem 0 .6rem;letter-spacing:-.01em}
+    h3{font-size:1rem;margin:1.2rem 0 .3rem}
+    p,li{color:var(--text)}
+    strong{color:#fff}
+    ul,ol{padding-left:1.2rem;display:grid;gap:.4rem}
+    section{border-top:1px solid var(--border);padding-top:1.4rem}
+    .callout{background:var(--surface);border:1px solid var(--border);
+      border-radius:var(--radius);padding:1rem 1.25rem;margin:1.5rem 0;color:var(--muted)}
+    footer{margin-top:3rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border);padding-top:1.2rem}
+    code{background:#0b0d12;border:1px solid var(--border);border-radius:6px;padding:.1em .4em;font-size:.9em}
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../../">← therene Legal</a>
+    <h1>MiniBrowserMirror 지원</h1>
+    <p class="meta">선택한 창을 작은 플로팅 미니 창으로 항상 위에 띄우는 macOS 유틸리티 · macOS 14 이상</p>
+
+    <div class="callout">
+      <strong>한 줄 소개:</strong> 메뉴바에서 창 하나를 고르면, 그 화면이 화면 구석의 작은 창에
+      실시간으로 떠서 항상 위에 보입니다. 전체화면으로 다른 작업을 하면서도 골라둔 창을 계속 지켜볼 수 있어요.
+    </div>
+
+    <section>
+      <h2>시작하기</h2>
+      <ol>
+        <li>앱을 실행하면 <strong>메뉴바</strong>에 미니 창 아이콘이 생깁니다.</li>
+        <li>처음 사용 시 <strong>화면 기록 권한</strong>을 요청합니다 — 시스템 설정에서 허용해 주세요.</li>
+        <li>메뉴바 아이콘 → <strong>소스 선택</strong> → 미러링할 창을 고릅니다(앱별로 묶여 있습니다).</li>
+        <li>화면 구석에 미니 창이 떠서 그 창을 실시간으로 비춥니다.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>사용법</h2>
+      <ul>
+        <li><strong>켜기/끄기</strong> · <strong>위치</strong>(네 모서리) · <strong>크게/작게</strong> — 메뉴바 메뉴에서 조절</li>
+        <li>미니 창은 <strong>마우스로 드래그</strong>해 자유롭게 옮길 수 있습니다.</li>
+        <li>선택한 창은 <strong>다음 실행 때 자동 복원</strong>됩니다.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>자주 묻는 질문</h2>
+
+      <h3>미니 창에 아무것도 안 보여요.</h3>
+      <p>시스템 설정 → 개인정보 보호 및 보안 → <strong>화면 기록</strong>에서 MiniBrowserMirror가 켜져 있는지
+      확인하세요. 권한을 켠 뒤에는 앱을 <strong>종료했다 다시 실행</strong>해야 적용됩니다.</p>
+
+      <h3>선택한 창이 목록에서 사라졌어요.</h3>
+      <p>해당 창이 닫히면 미니 창이 잠시 비워지고, 창이 다시 열리면 자동으로 다시 잡습니다.
+      메뉴를 다시 열면 현재 열린 창 목록으로 갱신됩니다.</p>
+
+      <h3>녹화도 되나요?</h3>
+      <p>아니요. 이 앱은 화면을 <strong>표시만</strong> 하며 저장·녹화·전송 기능이 없습니다.
+      자세한 내용은 <a href="../">개인정보 처리방침</a>을 참고하세요.</p>
+    </section>
+
+    <section>
+      <h2>문의</h2>
+      <p>버그 제보·기능 제안·기타 문의: <code>support@therene.co.kr</code></p>
+    </section>
+
+    <footer>© 2026 therene. MiniBrowserMirror.</footer>
+  </main>
+</body>
+</html>

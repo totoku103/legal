@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiniBrowserMirror — 개인정보 처리방침</title>
+  <style>
+    :root{
+      --bg:#0f1115; --surface:#171a21; --text:#e7e9ee; --muted:#9aa3b2;
+      --accent:#5b8cff; --border:#262b36; --radius:14px;
+      --space:clamp(1.25rem,1rem+2vw,2.5rem);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);
+      font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;}
+    main{max-width:760px;margin:0 auto;padding:var(--space);}
+    a.back{color:var(--muted);text-decoration:none;font-size:.9rem}
+    a.back:hover{color:var(--accent)}
+    h1{font-size:clamp(1.6rem,1.2rem+2vw,2.4rem);margin:.5em 0 .1em;letter-spacing:-.02em}
+    p.meta{color:var(--muted);margin:0 0 2rem;font-size:.9rem}
+    h2{font-size:1.2rem;margin:2.2rem 0 .6rem;letter-spacing:-.01em}
+    p,li{color:var(--text)}
+    strong{color:#fff}
+    ul{padding-left:1.2rem;display:grid;gap:.4rem}
+    section{border-top:1px solid var(--border);padding-top:1.4rem}
+    .callout{background:var(--surface);border:1px solid var(--border);
+      border-radius:var(--radius);padding:1rem 1.25rem;margin:1.5rem 0;color:var(--muted)}
+    footer{margin-top:3rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border);padding-top:1.2rem}
+    code{background:#0b0d12;border:1px solid var(--border);border-radius:6px;padding:.1em .4em;font-size:.9em}
+  </style>
+</head>
+<body>
+  <main>
+    <a class="back" href="../">← therene Legal</a>
+    <h1>MiniBrowserMirror 개인정보 처리방침</h1>
+    <p class="meta">최종 개정일: 2026-06-09 · 시행일: 2026-06-09</p>
+
+    <div class="callout">
+      <strong>요약:</strong> 이 앱은 사용자 데이터를 <strong>수집하지 않습니다</strong>.
+      사용자가 선택한 창의 화면은 <strong>같은 Mac 안에서만</strong> 작은 플로팅 창으로 표시되며,
+      어디에도 저장되거나 외부로 전송되지 않습니다. 네트워크 통신·계정·추적이 전혀 없습니다.
+    </div>
+
+    <section>
+      <h2>1. 수집하는 개인정보</h2>
+      <p>개발자는 어떠한 개인정보도 <strong>수집·저장하지 않습니다</strong>. 본 앱에는 회원가입·로그인·계정이 없으며,
+      서버로 전송되는 데이터가 없습니다.</p>
+    </section>
+
+    <section>
+      <h2>2. 화면 기록 권한</h2>
+      <p>본 앱은 사용자가 <strong>직접 선택한 창</strong> 하나를 작은 미니 창에 실시간으로 비추기 위해
+      macOS의 화면 기록 권한을 사용합니다. 캡처된 화면 프레임은 다음과 같이 처리됩니다.</p>
+      <ul>
+        <li>같은 Mac의 화면에 <strong>실시간 표시만</strong> 하기 위해 메모리에서 처리됩니다.</li>
+        <li>디스크에 <strong>저장하지 않으며</strong>, 외부(개발자 서버 포함)로 <strong>전송하지 않습니다</strong>.</li>
+        <li>녹화 기능이 없으며, 프레임은 화면에 그려진 즉시 폐기됩니다.</li>
+      </ul>
+      <p>즉, 사용자는 자신의 Mac에 떠 있는 창을 본인이 다시 보는 것이며, 그 내용은 기기를 벗어나지 않습니다.</p>
+    </section>
+
+    <section>
+      <h2>3. 기기 로컬 저장 항목</h2>
+      <p>아래 설정값만 사용자 기기(macOS UserDefaults)에 저장되며 외부로 전송되지 않습니다.</p>
+      <ul>
+        <li><strong>마지막으로 선택한 소스</strong>: 다음 실행 시 같은 창을 복원하기 위한 앱 식별자·창 제목.</li>
+        <li>미니 창의 표시 관련 설정(위치·크기 등) 등 앱 환경설정.</li>
+      </ul>
+      <p>이 값들은 개인 식별 목적이 아니며 기기 내에만 존재합니다.</p>
+    </section>
+
+    <section>
+      <h2>4. 제3자 SDK 및 추적</h2>
+      <ul>
+        <li>분석·광고 SDK를 사용하지 않습니다.</li>
+        <li>광고 식별자(IDFA)·SKAdNetwork를 사용하지 않으며, 어떠한 <strong>추적도 수행하지 않습니다</strong>.</li>
+        <li>네트워크 통신 자체가 없습니다.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. 권한</h2>
+      <ul>
+        <li>화면 기록 — 사용자가 선택한 창을 캡처하여 미니 창에 표시</li>
+      </ul>
+      <p>해당 권한은 <strong>시스템 설정 → 개인정보 보호 및 보안 → 화면 기록</strong>에서 언제든 철회할 수 있습니다.</p>
+    </section>
+
+    <section>
+      <h2>6. 아동의 개인정보</h2>
+      <p>본 앱은 아동을 대상으로 하지 않으며, 아동으로부터 어떠한 정보도 수집하지 않습니다.</p>
+    </section>
+
+    <section>
+      <h2>7. 개정</h2>
+      <p>본 방침이 변경되면 이 페이지에 개정일과 함께 게시합니다.</p>
+    </section>
+
+    <section>
+      <h2>8. 문의</h2>
+      <p>개인정보 관련 문의: <code>support@therene.co.kr</code></p>
+    </section>
+
+    <footer>© 2026 therene. MiniBrowserMirror.</footer>
+  </main>
+</body>
+</html>
