@@ -8,10 +8,17 @@ GitHub Pages + 커스텀 도메인으로 앱별 개인정보 처리방침을 호
 ## 구조
 ```
 .
-├── CNAME                 # legal.therene.co.kr (커스텀 도메인)
-├── index.html            # 앱 목록 랜딩
+├── CNAME                       # legal.therene.co.kr (커스텀 도메인)
+├── index.html                  # 앱 목록 랜딩
 ├── rtsp-camera/
-│   └── index.html        # RTSP Camera 처리방침 (신규 앱 템플릿 겸용)
+│   ├── index.html              # RTSP Camera 처리방침 (신규 앱 템플릿 겸용)
+│   └── support/index.html      # RTSP Camera 지원 페이지
+├── mini-browser-mirror/
+│   ├── index.html              # Mini Browser Mirror 처리방침
+│   └── support/index.html      # Mini Browser Mirror 지원 페이지
+├── flagdeck/
+│   ├── index.html              # FlagDeck 처리방침 (한/영)
+│   └── support/index.html      # FlagDeck 지원 페이지 (FAQ·문의)
 └── README.md
 ```
 
