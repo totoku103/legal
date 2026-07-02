@@ -33,13 +33,14 @@
   <main>
     <a class="back" href="../../">← therene Legal</a> · <a class="back" href="../">한국어</a>
     <h1>RTSP Camera Privacy Policy</h1>
-    <p class="meta">Last updated: 2026-06-30 · Effective: 2026-06-30</p>
+    <p class="meta">Last updated: 2026-07-03 · Effective: 2026-07-03</p>
 
     <div class="callout">
       <strong>Summary:</strong> The developer does <strong>not collect</strong> your personal data.
       Camera/microphone video and audio are sent only to the destination you choose (an RTSP client
       on the same network, or a relay server you set up yourself), without passing through or being
-      stored on the developer's servers. However, this app shows ads, and Google AdMob may collect
+      stored on the developer's servers. If you enable motion detection, snapshot images are stored
+      <strong>only on your device</strong>. However, this app shows ads, and Google AdMob may collect
       some data (such as device identifiers) to serve them (non-personalized ads only, no user tracking).
     </div>
 
@@ -58,15 +59,18 @@
         <li><strong>Local RTSP mode</strong>: A user-specified client on the same network (VLC, ffplay, an NVR, etc.) connects and receives the stream directly.</li>
         <li><strong>Cellular/remote mode (optional)</strong>: The stream is sent to a third-party relay server that you enter and provide yourself (bring-your-own model). The operation, data retention, access control, and jurisdiction of that relay are your responsibility and outside the developer's control.</li>
       </ul>
-      <p>In all cases, video/audio never passes through or is stored on the developer's servers.</p>
+      <p>In all cases, video/audio never passes through or is stored on the developer's servers.
+      If motion detection is enabled, a snapshot image taken at the moment of detection is stored
+      on your device (see section 3).</p>
     </section>
 
     <section>
       <h2>3. Data Stored Locally on Your Device</h2>
       <p>The following settings are stored only on your device and are not transmitted externally.</p>
       <ul>
-        <li><strong>UserDefaults</strong>: App settings such as the authentication username/Realm and relay (RTMP) address.</li>
+        <li><strong>UserDefaults</strong>: App settings such as the authentication username/Realm, relay (RTMP) address, and motion detection on/off and sensitivity.</li>
         <li><strong>Keychain</strong>: RTSP authentication password and relay stream key (stored encrypted).</li>
+        <li><strong>Motion event snapshots</strong>: When motion detection is enabled, still images (JPEG) captured at the moment of detection are kept in the app's private storage, up to 100 images; older items are deleted automatically when the limit is exceeded. You can delete them all in the app, and they are never transmitted externally.</li>
       </ul>
     </section>
 
