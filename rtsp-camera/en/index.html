@@ -33,12 +33,12 @@
   <main>
     <a class="back" href="../../">← therene Legal</a> · <a class="back" href="../">한국어</a>
     <h1>RTSP Camera Privacy Policy</h1>
-    <p class="meta">Last updated: 2026-07-03 · Effective: 2026-07-03</p>
+    <p class="meta">Last updated: 2026-10-09 · Effective: 2026-10-09</p>
 
     <div class="callout">
       <strong>Summary:</strong> The developer does <strong>not collect</strong> your personal data.
-      Camera/microphone video and audio are sent only to the destination you choose (an RTSP client
-      on the same network, or a relay server you set up yourself), without passing through or being
+      Camera/microphone video and audio are sent only to the destination you choose (an RTSP client or
+      web browser on the same network, or a relay server you set up yourself), without passing through or being
       stored on the developer's servers. If you enable motion detection, snapshot images are stored
       <strong>only on your device</strong>. However, this app shows ads, and Google AdMob may collect
       some data (such as device identifiers) to serve them (non-personalized ads only, no user tracking).
@@ -57,6 +57,7 @@
       are sent <strong>directly</strong> to the following destinations:</p>
       <ul>
         <li><strong>Local RTSP mode</strong>: A user-specified client on the same network (VLC, ffplay, an NVR, etc.) connects and receives the stream directly.</li>
+        <li><strong>Browser viewing</strong>: A web browser on a device on the same network connects directly to the address shown in the app (<code>http://&lt;phone-ip&gt;:8080</code>) and receives video (fast view) or video and audio (view with sound). You can turn it off in Settings; when access authentication is on, the same credentials as RTSP apply.</li>
         <li><strong>Cellular/remote mode (optional)</strong>: The stream is sent to a third-party relay server that you enter and provide yourself (bring-your-own model). The operation, data retention, access control, and jurisdiction of that relay are your responsibility and outside the developer's control.</li>
       </ul>
       <p>In all cases, video/audio never passes through or is stored on the developer's servers.
@@ -68,7 +69,7 @@
       <h2>3. Data Stored Locally on Your Device</h2>
       <p>The following settings are stored only on your device and are not transmitted externally.</p>
       <ul>
-        <li><strong>UserDefaults</strong>: App settings such as the authentication username/Realm, relay (RTMP) address, and motion detection on/off and sensitivity.</li>
+        <li><strong>UserDefaults</strong>: App settings such as the authentication username/Realm, relay (RTMP) address, motion detection on/off and sensitivity, video filter, camera (front/back), video quality, browser viewing on/off, and whether the connection guide has been shown.</li>
         <li><strong>Keychain</strong>: RTSP authentication password and relay stream key (stored encrypted).</li>
         <li><strong>Motion event snapshots</strong>: When motion detection is enabled, still images (JPEG) captured at the moment of detection are kept in the app's private storage, up to 100 images; older items are deleted automatically when the limit is exceeded. You can delete them all in the app, and they are never transmitted externally.</li>
       </ul>
@@ -78,6 +79,7 @@
       <h2>4. Third-Party SDKs and Tracking</h2>
       <ul>
         <li><strong>HaishinKit</strong>: Optional RTMP streaming library. It does not collect user data.</li>
+        <li><strong>hls.js (jsDelivr CDN)</strong>: When the view with sound is opened in a browser other than Safari, <strong>the viewer's browser</strong> downloads the open-source playback script (hls.js) from the public jsDelivr CDN. The CDN may receive standard web request information (such as the viewing device's IP address and browser details), governed by the <a href="https://www.jsdelivr.com/terms/privacy-policy" style="color:var(--accent)">jsDelivr Privacy Policy</a>. The app sends no data to the CDN, and video/audio never passes through it.</li>
         <li><strong>Google AdMob (Google Mobile Ads)</strong>: Used to display ads in the app. It may collect device identifiers, usage data, and diagnostics for ad delivery, frequency capping, and fraud prevention. This app requests <strong>non-personalized ads only</strong> and does not use the advertising identifier (IDFA), so it performs <strong>no user tracking</strong>. Install attribution uses Apple's privacy-preserving SKAdNetwork. For details on Google's data handling, see the <a href="https://policies.google.com/privacy" style="color:var(--accent)">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" style="color:var(--accent)">How Google uses information</a>.</li>
       </ul>
     </section>
@@ -87,7 +89,7 @@
       <ul>
         <li>Camera — for video streaming</li>
         <li>Microphone — for audio streaming</li>
-        <li>Local Network — to allow RTSP connections from devices on the same network</li>
+        <li>Local Network — to allow RTSP players and web browsers on the same network to connect</li>
       </ul>
       <p>You can revoke each permission at any time in iOS Settings.</p>
     </section>

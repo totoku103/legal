@@ -33,11 +33,11 @@
   <main>
     <a class="back" href="../">← therene Legal</a> · <a class="back" href="en/">English</a>
     <h1>RTSP Camera 개인정보 처리방침</h1>
-    <p class="meta">최종 개정일: 2026-07-03 · 시행일: 2026-07-03</p>
+    <p class="meta">최종 개정일: 2026-10-09 · 시행일: 2026-10-09</p>
 
     <div class="callout">
       <strong>요약:</strong> 개발자는 사용자 데이터를 <strong>수집하지 않습니다</strong>.
-      카메라·마이크 영상/음성은 사용자가 지정한 대상(같은 네트워크의 RTSP 클라이언트 또는
+      카메라·마이크 영상/음성은 사용자가 지정한 대상(같은 네트워크의 RTSP 클라이언트·웹 브라우저 또는
       사용자가 직접 준비한 릴레이 서버)으로만 직접 전송되며, 개발자 서버를 거치거나 개발자 서버에 저장되지 않습니다.
       움직임 감지 기능 사용 시 스냅샷 이미지가 <strong>사용자 기기 내에만</strong> 저장됩니다.
       다만 본 앱은 광고를 표시하며, 광고 제공을 위해 Google AdMob이 기기 식별자 등 일부 데이터를
@@ -55,6 +55,7 @@
       다음 대상으로 <strong>직접</strong> 전송됩니다.</p>
       <ul>
         <li><strong>로컬 RTSP 모드</strong>: 같은 네트워크의 사용자 지정 클라이언트(VLC, ffplay, NVR 등)가 직접 접속하여 수신합니다.</li>
+        <li><strong>브라우저 시청</strong>: 같은 네트워크 기기의 웹 브라우저가 앱에 표시된 주소(<code>http://&lt;폰IP&gt;:8080</code>)로 직접 접속하여 영상(빠른 보기) 또는 영상·음성(소리 포함 보기)을 수신합니다. 설정에서 끌 수 있으며, 접속 인증을 켜면 RTSP와 같은 계정이 적용됩니다.</li>
         <li><strong>셀룰러/원격 모드(선택)</strong>: 사용자가 직접 입력·준비한 제3자 릴레이 서버로 전송됩니다(BYO 모델). 해당 릴레이의 운영 주체·데이터 보관·접근통제·관할은 사용자 책임이며 개발자의 통제 밖입니다.</li>
       </ul>
       <p>어느 경우에도 영상/음성은 개발자 서버를 경유하거나 개발자 서버에 저장되지 않습니다.
@@ -65,7 +66,7 @@
       <h2>3. 기기 로컬 저장 항목</h2>
       <p>아래 설정값은 사용자 기기에만 저장되며 외부로 전송되지 않습니다.</p>
       <ul>
-        <li><strong>UserDefaults</strong>: 인증 사용자명·Realm, 릴레이(RTMP) 주소, 움직임 감지 사용 여부·민감도 등 앱 설정.</li>
+        <li><strong>UserDefaults</strong>: 인증 사용자명·Realm, 릴레이(RTMP) 주소, 움직임 감지 사용 여부·민감도, 영상 필터, 카메라 방향(전면/후면), 송출 화질, 브라우저 시청 사용 여부, 연결 도우미 표시 여부 등 앱 설정.</li>
         <li><strong>Keychain</strong>: RTSP 인증 비밀번호, 릴레이 스트림 키(암호화 저장).</li>
         <li><strong>움직임 이벤트 스냅샷</strong>: 움직임 감지 기능 사용 시 감지 시점의 정지 이미지(JPEG)가 앱 전용 저장 공간에 최대 100장 보관되며, 초과 시 오래된 항목부터 자동 삭제됩니다. 앱 내에서 전체 삭제할 수 있으며 외부로 전송되지 않습니다.</li>
       </ul>
@@ -75,6 +76,7 @@
       <h2>4. 제3자 SDK 및 추적</h2>
       <ul>
         <li><strong>HaishinKit</strong>: 선택적 RTMP 송출 라이브러리. 사용자 데이터를 수집하지 않습니다.</li>
+        <li><strong>hls.js(jsDelivr CDN)</strong>: Safari가 아닌 브라우저에서 소리 포함 보기를 열면, <strong>시청하는 기기의 브라우저</strong>가 공개 CDN(jsDelivr)에서 오픈소스 재생 스크립트(hls.js)를 내려받습니다. 이때 CDN은 일반적인 웹 요청 정보(시청 기기의 IP 주소, 브라우저 정보 등)를 받을 수 있으며, 이는 <a href="https://www.jsdelivr.com/terms/privacy-policy" style="color:var(--accent)">jsDelivr 개인정보처리방침</a>을 따릅니다. 앱은 CDN에 어떠한 데이터도 보내지 않으며, 영상·음성은 CDN을 거치지 않습니다.</li>
         <li><strong>Google AdMob(Google Mobile Ads)</strong>: 앱 내 광고 표시를 위해 사용합니다. 광고 제공·빈도 제한·부정 방지 등을 위해 기기 식별자, 사용 데이터, 진단 정보 등을 수집할 수 있습니다. 본 앱은 <strong>비맞춤형 광고만</strong> 요청하고 광고 식별자(IDFA)를 사용하지 않으므로 사용자 <strong>추적은 수행하지 않습니다</strong>. 설치 기여 측정에는 프라이버시 보존 방식인 Apple SKAdNetwork를 사용합니다. Google의 데이터 처리에 관한 자세한 내용은 <a href="https://policies.google.com/privacy" style="color:var(--accent)">Google 개인정보처리방침</a> 및 <a href="https://policies.google.com/technologies/partner-sites" style="color:var(--accent)">Google의 데이터 사용 방식</a>을 참조하세요.</li>
       </ul>
     </section>
@@ -84,7 +86,7 @@
       <ul>
         <li>카메라 — 영상 송출</li>
         <li>마이크 — 음성 송출</li>
-        <li>로컬 네트워크 — 같은 네트워크 기기의 RTSP 접속 허용</li>
+        <li>로컬 네트워크 — 같은 네트워크 기기의 RTSP 플레이어·웹 브라우저 접속 허용</li>
       </ul>
       <p>각 권한은 iOS 설정에서 언제든 철회할 수 있습니다.</p>
     </section>
