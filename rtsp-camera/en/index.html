@@ -41,7 +41,7 @@
       web browser on the same network, or a relay server you set up yourself), without passing through or being
       stored on the developer's servers. If you enable motion detection, snapshot images are stored
       <strong>only on your device</strong>. However, this app shows ads, and Google AdMob may collect
-      some data (such as device identifiers) to serve them (non-personalized ads only, no user tracking).
+      some data (such as device identifiers and approximate location) to serve them (non-personalized ads only, no user tracking).
     </div>
 
     <section>
@@ -80,7 +80,7 @@
       <ul>
         <li><strong>HaishinKit</strong>: Optional RTMP streaming library. It does not collect user data.</li>
         <li><strong>hls.js (jsDelivr CDN)</strong>: When the view with sound is opened in a browser other than Safari, <strong>the viewer's browser</strong> downloads the open-source playback script (hls.js) from the public jsDelivr CDN. The CDN may receive standard web request information (such as the viewing device's IP address and browser details), governed by the <a href="https://www.jsdelivr.com/terms/privacy-policy" style="color:var(--accent)">jsDelivr Privacy Policy</a>. The app sends no data to the CDN, and video/audio never passes through it.</li>
-        <li><strong>Google AdMob (Google Mobile Ads)</strong>: Used to display ads in the app. It may collect device identifiers, usage data, and diagnostics for ad delivery, frequency capping, and fraud prevention. This app requests <strong>non-personalized ads only</strong> and does not use the advertising identifier (IDFA), so it performs <strong>no user tracking</strong>. Install attribution uses Apple's privacy-preserving SKAdNetwork. For details on Google's data handling, see the <a href="https://policies.google.com/privacy" style="color:var(--accent)">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" style="color:var(--accent)">How Google uses information</a>.</li>
+        <li><strong>Google AdMob (Google Mobile Ads)</strong>: Used to display ads in the app. It may collect device identifiers, approximate location (based on IP address), usage data (ad views and interactions), and diagnostics (crash and performance data) for ad delivery, frequency capping, fraud prevention, and analytics. Precise (GPS) location is not collected. This app requests <strong>non-personalized ads only</strong> and does not use the advertising identifier (IDFA), so it performs <strong>no user tracking</strong>. Install attribution uses Apple's privacy-preserving SKAdNetwork. For details on Google's data handling, see the <a href="https://policies.google.com/privacy" style="color:var(--accent)">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" style="color:var(--accent)">How Google uses information</a>.</li>
       </ul>
     </section>
 
