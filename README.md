@@ -16,6 +16,9 @@ GitHub Pages + 커스텀 도메인으로 앱별 개인정보 처리방침을 호
 ├── mini-browser-mirror/
 │   ├── index.html              # Mini Browser Mirror 처리방침
 │   └── support/index.html      # Mini Browser Mirror 지원 페이지
+├── ttwilkka/
+│   ├── index.html              # ttwilkka 처리방침 (한/영)
+│   └── support/index.html      # ttwilkka 지원 페이지
 ├── flagdeck/
 │   ├── index.html              # FlagDeck 처리방침 (한/영)
 │   └── support/index.html      # FlagDeck 지원 페이지 (FAQ·문의)
