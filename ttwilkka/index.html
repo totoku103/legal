@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ttwilkka 개인정보처리방침 / Privacy Policy</title>
+  <title>뛸까(ttwilkka) 개인정보처리방침 / Privacy Policy</title>
   <style>
     :root {
       --bg: #0f0f10;
@@ -157,7 +157,7 @@
 
 <div class="header">
   <div>
-    <div class="logo">ttwilkka</div>
+    <div class="logo">뛸까</div>
     <div class="subtitle">개인정보처리방침 / Privacy Policy</div>
   </div>
 </div>
@@ -171,10 +171,10 @@
 
   <!-- ============ KOREAN ============ -->
   <div id="content-ko" class="content active">
-    <h1>ttwilkka 개인정보처리방침</h1>
-    <div class="last-updated">최종 수정일: 2026-11-07</div>
+    <h1>뛸까(ttwilkka) 개인정보처리방침</h1>
+    <div class="last-updated">최종 수정일: 2026-11-08</div>
 
-    <p>ttwilkka(이하 "앱")는 등록한 지하철역 반경에 들어가면 다음 열차 도착 시간과 걸음 속도를 알려주는 앱입니다.
+    <p>뛸까(ttwilkka, 이하 "앱")는 등록한 지하철역이나 버스 정류장 근처에 가면 다음 열차·버스 도착 시간과 걸음 속도를 알려주는 앱입니다.
     본 방침은 개인정보 보호법(PIPA), 위치정보의 보호 및 이용 등에 관한 법률, EU 일반 데이터 보호 규정(GDPR),
     미국 캘리포니아 소비자 프라이버시법(CCPA/CPRA)의 기준에 따라 앱의 데이터 처리 방식을 안내합니다.</p>
 
@@ -182,47 +182,64 @@
     <ul>
       <li>앱은 회원가입·로그인 기능이 없으며 이름, 이메일, 전화번호 등 계정 정보를 수집하지 않습니다.</li>
       <li><strong>위치 정보는 기기 안에서만 처리하며 서버로 전송하거나 저장하지 않습니다.</strong></li>
-      <li>서버로는 역 검색어와 조회하는 역·호선·방향만 전송됩니다. 이 정보로 사용자를 식별하지 않습니다.</li>
+      <li><strong>건강 앱의 걷기 속도는 사용자가 설정에서 켠 경우에만 읽고, 기기 안에서만 사용하며 서버로 전송하지 않습니다.</strong></li>
+      <li>서버로는 조회하는 지하철 탑승 지점과 방향, 버스 정류장과 노선만 전송됩니다. 역·정류장 검색은 기기에 내려받은 목록에서 하므로 검색어를 보내지 않습니다. 이 정보로 사용자를 식별하지 않습니다.</li>
       <li>광고, 이용 통계 분석, 추적 기능이 없습니다.</li>
     </ul>
 
     <h2>2. 위치 정보</h2>
     <p>앱은 다음 목적에만 기기의 위치를 사용합니다.</p>
     <ul>
-      <li>등록한 역의 반경에 들어갔는지 판단 (iOS 지역 감시 기능)</li>
-      <li>역까지의 거리를 계산해 걸음 속도 안내</li>
+      <li>등록한 역이나 정류장의 반경에 들어갔는지 판단 (iOS 지역 감시 기능)</li>
+      <li>역이나 정류장까지의 거리를 계산해 걸음 속도 안내</li>
+      <li>정류장 검색 결과와 지도, 근처 역·정류장 추천을 가까운 순으로 보여주기</li>
     </ul>
-    <p>반경 판단과 거리 계산은 모두 iOS와 앱이 기기 안에서 처리합니다. 위치 좌표는 서버를 포함한 외부로 전송되지 않으며
+    <p>반경 판단, 거리 계산, 가까운 순 정렬은 모두 iOS와 앱이 기기 안에서 처리합니다. 위치 좌표는 서버를 포함한 외부로 전송되지 않으며
     앱이 별도로 기록하거나 보관하지 않습니다.</p>
     <p>앱을 닫아둔 상태에서도 알림을 받으려면 위치 권한을 '항상 허용'으로 설정해야 합니다. 위치 권한은 iOS 설정 → 개인정보 보호 및 보안 →
-    위치 서비스에서 언제든지 변경하거나 끌 수 있으며, 끄면 자동 알림만 동작하지 않고 역 검색과 도착 정보 조회는 계속 이용할 수 있습니다.</p>
+    위치 서비스에서 언제든지 변경하거나 끌 수 있으며, 끄면 자동 알림만 동작하지 않고 검색과 도착 정보 조회는 계속 이용할 수 있습니다.</p>
 
-    <h2>3. 기기 내 로컬 저장 데이터</h2>
+    <h2>3. 건강 정보(걷기 속도)</h2>
+    <p>사용자가 앱 설정에서 '건강 앱 걷기 속도 쓰기'를 켠 경우에만, Apple 건강 앱에 기록된 최근 4주의 걷기 속도를 읽습니다.
+    켜기 전에는 건강 데이터 권한을 요청하지 않습니다.</p>
+    <ul>
+      <li>목적: 역이나 정류장까지 걸리는 시간을 사용자의 걸음에 맞게 계산해 걸음 속도를 안내</li>
+      <li>처리: 기록들의 중앙값으로 평소 걷기 속도 하나를 계산해 기기에만 저장합니다. 개별 기록은 저장하지 않습니다.</li>
+      <li>건강 데이터를 읽기만 하며 건강 앱에 쓰지 않습니다. 서버로 전송하지 않고 광고, 마케팅, 제3자 제공에 사용하지 않습니다.</li>
+      <li>앱 설정에서 끄면 저장한 값을 사용하지 않습니다. 읽기 권한은 iOS 설정 → 건강 → 데이터 접근 및 기기 → 뛸까에서 언제든지 철회할 수 있습니다.</li>
+    </ul>
+
+    <h2>4. 기기 내 로컬 저장 데이터</h2>
     <p>다음 데이터는 사용자의 기기에만 저장되며 외부로 전송되지 않습니다.</p>
     <table>
       <tr><th>항목</th><th>설명</th></tr>
-      <tr><td>등록한 역</td><td>역 이름, 호선, 방향, 알림 반경, 알림 켜짐 여부</td></tr>
-      <tr><td>알림 기록</td><td>같은 역의 알림이 반복되지 않도록 남기는 마지막 알림 시각</td></tr>
+      <tr><td>등록한 역·정류장</td><td>역 이름, 호선, 방향 또는 정류장 이름, 노선, 알림 반경, 알림 시간대, 직접 입력한 걸리는 시간, 알림 켜짐 여부</td></tr>
+      <tr><td>평소 걷기 속도</td><td>건강 앱 걷기 속도를 켠 경우에만, 기록들로 계산한 값 하나와 계산한 시각</td></tr>
+      <tr><td>역·정류장 목록과 공휴일</td><td>검색과 지도에 쓰려고 서버에서 내려받은 공개 목록과 그 버전 값. 개인정보가 아닙니다.</td></tr>
+      <tr><td>알림 기록</td><td>같은 곳의 알림이 반복되지 않도록 남기는 마지막 알림 시각</td></tr>
       <tr><td>앱 설정</td><td>첫 실행 안내를 마쳤는지 등</td></tr>
     </table>
     <p>앱을 삭제하면 위 데이터는 모두 함께 삭제됩니다.</p>
 
-    <h2>4. 서버로 전송되는 정보</h2>
+    <h2>5. 서버로 전송되는 정보</h2>
     <p>도착 정보를 보여주기 위해 앱은 개발자가 운영하는 서버(<code>ttwilkka.therene.co.kr</code>)에 다음 정보를 보냅니다.</p>
     <table>
       <tr><th>항목</th><th>목적</th><th>보관</th></tr>
-      <tr><td>역 검색어</td><td>역 찾기</td><td>보관하지 않음</td></tr>
-      <tr><td>탑승 지점 번호와 방향</td><td>도착 정보 조회</td><td>보관하지 않음</td></tr>
+      <tr><td>지하철 탑승 지점 번호와 방향</td><td>열차 도착 정보 조회</td><td>보관하지 않음</td></tr>
+      <tr><td>버스 정류장과 노선 번호</td><td>노선 목록과 버스 도착 정보 조회</td><td>보관하지 않음. 같은 정류장의 도착 정보만 서버에서 20초, 노선 목록은 12시간 임시 저장</td></tr>
+      <tr><td>내려받은 목록의 버전 값</td><td>역·정류장 목록과 공휴일이 바뀌었는지 확인 (하루 한 번)</td><td>보관하지 않음</td></tr>
+      <tr><td>역·정류장 검색어</td><td>목록을 아직 내려받지 못했을 때만 서버에서 검색</td><td>보관하지 않음</td></tr>
       <tr><td>접속 IP 주소</td><td>과도한 호출을 막기 위한 분당 호출 수 계산</td><td>서버 메모리에서 1분 동안만 사용 후 폐기. 파일이나 데이터베이스에 기록하지 않음</td></tr>
     </table>
-    <p>서버는 기기 식별자, 위치, 등록한 역 목록을 받지 않습니다.</p>
+    <p>서버는 기기 식별자, 위치, 건강 정보, 등록한 역·정류장 목록을 받지 않습니다.
+    버스 도착 정보는 서버가 정류장 번호로 서울특별시와 경기도의 공공 API에 조회하며, 이때 사용자에 관한 정보는 전달하지 않습니다.</p>
 
-    <h2>5. 알림과 실시간 현황</h2>
+    <h2>6. 알림과 실시간 현황</h2>
     <p>도착 알림과 잠금 화면·다이나믹 아일랜드의 실시간 현황(Live Activity)은 기기 안에서 만들어집니다.
     푸시 알림 서버를 사용하지 않으며, 이를 위해 개인정보를 수집하거나 외부로 전송하지 않습니다.
     알림과 실시간 현황은 iOS 설정에서 언제든지 끌 수 있습니다.</p>
 
-    <h2>6. 처리 위탁 및 국외 이전</h2>
+    <h2>7. 처리 위탁 및 국외 이전</h2>
     <p>앱과 서버 사이의 연결은 보안과 전송을 위해 Cloudflare를 거칩니다. 이 과정에서 접속 IP 주소와 요청 정보가 처리될 수 있습니다.</p>
     <table>
       <tr><th>받는 자</th><th>국가</th><th>항목</th><th>목적</th><th>보유 기간</th></tr>
@@ -230,27 +247,29 @@
     </table>
     <p>이전은 앱을 사용할 때 네트워크로 이루어집니다. Cloudflare의 처리 방식은
     <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 개인정보처리방침</a>을 참고하십시오.
-    이전을 원하지 않으면 앱 사용을 중단하면 됩니다. 이 경우 도착 정보를 조회할 수 없습니다.</p>
+    이전을 원하지 않으면 앱 사용을 중단하면 됩니다. 이 경우 도착 정보를 조회할 수 없습니다.
+    위치 정보와 건강 정보는 기기 밖으로 나가지 않으므로 이전 대상이 아닙니다.</p>
 
-    <h2>7. 제3자 제공</h2>
+    <h2>8. 제3자 제공</h2>
     <p>앱은 개인정보를 판매하거나 제3자에게 제공하지 않습니다.</p>
 
-    <h2>8. 아동 개인정보</h2>
+    <h2>9. 아동 개인정보</h2>
     <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 알면서 수집하지 않습니다.</p>
 
-    <h2>9. 정보주체의 권리</h2>
+    <h2>10. 정보주체의 권리</h2>
     <ul>
-      <li>위치·알림 권한은 iOS 설정에서 언제든지 철회할 수 있습니다.</li>
-      <li>기기 내 데이터는 앱에서 등록한 역을 지우거나 앱을 삭제하면 제거됩니다.</li>
+      <li>위치·알림 권한은 iOS 설정에서, 건강 데이터 읽기 권한은 iOS 설정 → 건강 → 데이터 접근 및 기기에서 언제든지 철회할 수 있습니다.</li>
+      <li>기기 내 데이터는 앱에서 등록한 역·정류장을 지우거나 앱을 삭제하면 제거됩니다.</li>
       <li>개발자는 사용자를 식별할 수 있는 정보를 보관하지 않아 열람·삭제할 대상이 없습니다. 그 밖의 문의는 아래 이메일로 연락 주십시오.</li>
     </ul>
     <div class="highlight-box">
       문의: <a href="mailto:support@therene.co.kr">support@therene.co.kr</a>
     </div>
 
-    <h2>10. 개인정보처리방침 변경 안내</h2>
+    <h2>11. 개인정보처리방침 변경 안내</h2>
     <p>본 방침이 변경될 경우, 변경 내용은 이 페이지에 최신 수정일과 함께 게시됩니다.</p>
     <ul>
+      <li>2026-11-08: 버스 정류장·노선 전송, 기기 내 검색과 목록 저장, 건강 앱 걷기 속도(선택) 반영</li>
       <li>2026-11-07: 최초 게시</li>
     </ul>
 
@@ -261,11 +280,11 @@
 
   <!-- ============ ENGLISH ============ -->
   <div id="content-en" class="content">
-    <h1>ttwilkka Privacy Policy</h1>
-    <div class="last-updated">Last Updated: November 7, 2026</div>
+    <h1>Ttwilkka (뛸까) Privacy Policy</h1>
+    <div class="last-updated">Last Updated: November 8, 2026</div>
 
-    <p>ttwilkka ("the App") alerts you with the next train arrival time and a suggested walking pace when you enter the
-    radius of a subway station you registered. This policy explains how the App handles data, in line with the Korean
+    <p>Ttwilkka ("the App") tells you when the next train or bus arrives and suggests a walking pace when you get near a
+    subway station or bus stop you registered. This policy explains how the App handles data, in line with the Korean
     Personal Information Protection Act (PIPA), the Act on the Protection and Use of Location Information, the EU General
     Data Protection Regulation (GDPR), and the California Consumer Privacy Act (CCPA/CPRA).</p>
 
@@ -273,49 +292,66 @@
     <ul>
       <li>The App has no sign-up or login and collects no account information such as name, email, or phone number.</li>
       <li><strong>Location is processed only on your device and is never sent to or stored on a server.</strong></li>
-      <li>Only station search terms and the station, line, and direction you look up are sent to the server. They are not used to identify you.</li>
+      <li><strong>Walking speed from the Health app is read only if you turn it on in Settings, is used only on your device, and is never sent to a server.</strong></li>
+      <li>Only the subway platform and direction, or the bus stop and routes, you look up are sent to the server. Station and stop search runs on a list downloaded to your device, so search terms are not sent. None of this is used to identify you.</li>
       <li>The App contains no ads, analytics, or tracking.</li>
     </ul>
 
     <h2>2. Location</h2>
     <p>The App uses your device's location only to:</p>
     <ul>
-      <li>Detect when you enter the radius of a registered station (iOS region monitoring)</li>
-      <li>Calculate the distance to the station to suggest a walking pace</li>
+      <li>Detect when you enter the radius of a registered station or stop (iOS region monitoring)</li>
+      <li>Calculate the distance to it to suggest a walking pace</li>
+      <li>Sort stop search results, the map, and nearby suggestions by distance</li>
     </ul>
-    <p>Both are handled on your device by iOS and the App. Location coordinates are never sent anywhere, including our
+    <p>All of this is handled on your device by iOS and the App. Location coordinates are never sent anywhere, including our
     server, and the App does not record or keep them.</p>
     <p>To receive alerts while the App is closed, location access must be set to "Always". You can change or turn it off
     at any time in iOS Settings → Privacy &amp; Security → Location Services. Without it, only automatic alerts stop working;
-    station search and arrival lookups remain available.</p>
+    search and arrival lookups remain available.</p>
 
-    <h2>3. Data Stored Locally on Your Device</h2>
+    <h2>3. Health Data (Walking Speed)</h2>
+    <p>Only if you turn on "Use Health app walking speed" in the App's settings does the App read your walking speed from the
+    last four weeks in Apple Health. It does not ask for Health access before you turn it on.</p>
+    <ul>
+      <li>Purpose: to estimate how long it takes you to walk to a station or stop and suggest a pace that fits you</li>
+      <li>Processing: the App computes a single usual walking speed (the median of your records) and stores only that value on your device. Individual records are not stored.</li>
+      <li>The App only reads Health data and never writes to Health. The data is never sent to a server and is never used for advertising, marketing, or third-party sharing.</li>
+      <li>Turning it off in the App stops the stored value from being used. You can revoke read access at any time in iOS Settings → Health → Data Access &amp; Devices → 뛸까.</li>
+    </ul>
+
+    <h2>4. Data Stored Locally on Your Device</h2>
     <p>The following data is stored only on your device and is never transmitted.</p>
     <table>
       <tr><th>Item</th><th>Description</th></tr>
-      <tr><td>Registered stations</td><td>Station name, line, direction, alert radius, and whether the alert is on</td></tr>
-      <tr><td>Alert history</td><td>The time of the last alert per station, used to avoid repeated alerts</td></tr>
+      <tr><td>Registered stations and stops</td><td>Station name, line, and direction, or stop name and routes; alert radius, alert hours, the walking time you entered, and whether the alert is on</td></tr>
+      <tr><td>Usual walking speed</td><td>Only if Health walking speed is on: one computed value and when it was computed</td></tr>
+      <tr><td>Station and stop lists, holidays</td><td>Public lists downloaded from our server for search and the map, with their version value. Not personal information.</td></tr>
+      <tr><td>Alert history</td><td>The time of the last alert per place, used to avoid repeated alerts</td></tr>
       <tr><td>App settings</td><td>Such as whether the first-run guide was completed</td></tr>
     </table>
     <p>Uninstalling the App removes all of this data.</p>
 
-    <h2>4. Information Sent to Our Server</h2>
+    <h2>5. Information Sent to Our Server</h2>
     <p>To show arrival information, the App sends the following to a server operated by the developer
     (<code>ttwilkka.therene.co.kr</code>).</p>
     <table>
       <tr><th>Item</th><th>Purpose</th><th>Retention</th></tr>
-      <tr><td>Station search term</td><td>Finding stations</td><td>Not retained</td></tr>
-      <tr><td>Platform number and direction</td><td>Looking up arrivals</td><td>Not retained</td></tr>
+      <tr><td>Subway platform number and direction</td><td>Looking up train arrivals</td><td>Not retained</td></tr>
+      <tr><td>Bus stop and route numbers</td><td>Looking up routes and bus arrivals</td><td>Not retained. The server briefly caches arrivals per stop for 20 seconds and route lists for 12 hours</td></tr>
+      <tr><td>Version value of downloaded lists</td><td>Checking once a day whether the station/stop lists or holidays changed</td><td>Not retained</td></tr>
+      <tr><td>Station or stop search term</td><td>Only when the list has not been downloaded yet</td><td>Not retained</td></tr>
       <tr><td>IP address</td><td>Counting requests per minute to prevent abuse</td><td>Held in server memory for one minute, then discarded. Not written to files or databases</td></tr>
     </table>
-    <p>The server does not receive device identifiers, your location, or your list of registered stations.</p>
+    <p>The server does not receive device identifiers, your location, health data, or your list of registered stations and stops.
+    For bus arrivals, the server queries the Seoul Metropolitan Government and Gyeonggi Province public APIs by stop number and passes no information about you.</p>
 
-    <h2>5. Notifications and Live Activities</h2>
+    <h2>6. Notifications and Live Activities</h2>
     <p>Arrival notifications and the Live Activity on the Lock Screen and Dynamic Island are created on your device.
     No push notification server is used, and no personal information is collected or transmitted for them.
     You can turn them off at any time in iOS Settings.</p>
 
-    <h2>6. Processors and International Transfer</h2>
+    <h2>7. Processors and International Transfer</h2>
     <p>Connections between the App and the server pass through Cloudflare for delivery and security, which may process your IP address and request information.</p>
     <table>
       <tr><th>Recipient</th><th>Country</th><th>Items</th><th>Purpose</th><th>Retention</th></tr>
@@ -323,27 +359,29 @@
     </table>
     <p>The transfer occurs over the network whenever you use the App. See the
     <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>. If you do not wish this transfer,
-    you may stop using the App, in which case arrival information will not be available.</p>
+    you may stop using the App, in which case arrival information will not be available.
+    Location and health data never leave your device and are not transferred.</p>
 
-    <h2>7. Third-Party Sharing</h2>
+    <h2>8. Third-Party Sharing</h2>
     <p>The App does not sell or share personal information with third parties.</p>
 
-    <h2>8. Children's Privacy</h2>
+    <h2>9. Children's Privacy</h2>
     <p>The App is not directed to children under 14 and does not knowingly collect their personal information.</p>
 
-    <h2>9. Your Rights</h2>
+    <h2>10. Your Rights</h2>
     <ul>
-      <li>You can revoke location and notification access at any time in iOS Settings.</li>
-      <li>Data on your device is removed when you delete registered stations or uninstall the App.</li>
+      <li>You can revoke location and notification access in iOS Settings, and Health read access in iOS Settings → Health → Data Access &amp; Devices, at any time.</li>
+      <li>Data on your device is removed when you delete registered stations and stops or uninstall the App.</li>
       <li>The developer keeps no information that identifies you, so there is nothing to access or delete. For other questions, contact us below.</li>
     </ul>
     <div class="highlight-box">
       Contact: <a href="mailto:support@therene.co.kr">support@therene.co.kr</a>
     </div>
 
-    <h2>10. Changes to This Policy</h2>
+    <h2>11. Changes to This Policy</h2>
     <p>Changes will be posted on this page with the latest update date.</p>
     <ul>
+      <li>2026-11-08: Added bus stop and route lookups, on-device search with downloaded lists, and optional Health app walking speed</li>
       <li>2026-11-07: Initial publication</li>
     </ul>
 
@@ -357,7 +395,7 @@
 <div class="footer">
   &copy; 2026 ttwilkka &middot;
   <a href="mailto:support@therene.co.kr">support@therene.co.kr</a> &middot;
-  <span>Last Updated: November 7, 2026</span>
+  <span>Last Updated: November 8, 2026</span>
 </div>
 
 <script>
