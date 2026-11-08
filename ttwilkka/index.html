@@ -184,6 +184,7 @@
       <li><strong>위치 정보는 기기 안에서만 처리하며 서버로 전송하거나 저장하지 않습니다.</strong></li>
       <li><strong>건강 앱의 걷기 속도는 사용자가 설정에서 켠 경우에만 읽고, 기기 안에서만 사용하며 서버로 전송하지 않습니다.</strong></li>
       <li>서버로는 조회하는 지하철 탑승 지점과 방향, 버스 정류장과 노선만 전송됩니다. 역·정류장 검색은 기기에 내려받은 목록에서 하므로 검색어를 보내지 않습니다. 이 정보로 사용자를 식별하지 않습니다.</li>
+      <li>Apple Watch 앱을 쓰면 등록한 역·정류장 목록이 사용자의 짝지은 Apple Watch로만 전달됩니다. 개발자 서버를 거치지 않습니다.</li>
       <li>광고, 이용 통계 분석, 추적 기능이 없습니다.</li>
     </ul>
 
@@ -210,7 +211,7 @@
     </ul>
 
     <h2>4. 기기 내 로컬 저장 데이터</h2>
-    <p>다음 데이터는 사용자의 기기에만 저장되며 외부로 전송되지 않습니다.</p>
+    <p>다음 데이터는 사용자의 기기(iPhone과, Apple Watch 앱을 쓰는 경우 짝지은 Apple Watch)에만 저장되며 개발자 서버를 포함한 외부로 전송되지 않습니다.</p>
     <table>
       <tr><th>항목</th><th>설명</th></tr>
       <tr><td>등록한 역·정류장</td><td>역 이름, 호선, 방향 또는 정류장 이름, 노선, 알림 반경, 알림 시간대, 직접 입력한 걸리는 시간, 알림 켜짐 여부</td></tr>
@@ -218,8 +219,9 @@
       <tr><td>역·정류장 목록과 공휴일</td><td>검색과 지도에 쓰려고 서버에서 내려받은 공개 목록과 그 버전 값. 개인정보가 아닙니다.</td></tr>
       <tr><td>알림 기록</td><td>같은 곳의 알림이 반복되지 않도록 남기는 마지막 알림 시각</td></tr>
       <tr><td>앱 설정</td><td>첫 실행 안내를 마쳤는지 등</td></tr>
+      <tr><td>Apple Watch에 둔 목록</td><td>Apple Watch 앱이 설치된 경우, iPhone에서 등록한 역·정류장 목록의 사본. 컴플리케이션에서 고른 곳과 노선</td></tr>
     </table>
-    <p>앱을 삭제하면 위 데이터는 모두 함께 삭제됩니다.</p>
+    <p>앱을 삭제하면 위 데이터는 모두 함께 삭제됩니다. Apple Watch에 둔 목록은 워치 앱을 삭제하면 삭제됩니다.</p>
 
     <h2>5. 서버로 전송되는 정보</h2>
     <p>도착 정보를 보여주기 위해 앱은 개발자가 운영하는 서버(<code>ttwilkka.therene.co.kr</code>)에 다음 정보를 보냅니다.</p>
@@ -231,13 +233,16 @@
       <tr><td>역·정류장 검색어</td><td>목록을 아직 내려받지 못했을 때만 서버에서 검색</td><td>보관하지 않음</td></tr>
       <tr><td>접속 IP 주소</td><td>과도한 호출을 막기 위한 분당 호출 수 계산</td><td>서버 메모리에서 1분 동안만 사용 후 폐기. 파일이나 데이터베이스에 기록하지 않음</td></tr>
     </table>
+    <p>Apple Watch 앱도 도착 정보를 보여주기 위해 같은 서버에 지하철 탑승 지점이나 버스 정류장·노선 번호를 보냅니다. 보내는 항목과 보관 방식은 위와 같습니다.</p>
     <p>서버는 기기 식별자, 위치, 건강 정보, 등록한 역·정류장 목록을 받지 않습니다.
     버스 도착 정보는 서버가 정류장 번호로 서울특별시와 경기도의 공공 API에 조회하며, 이때 사용자에 관한 정보는 전달하지 않습니다.</p>
 
-    <h2>6. 알림과 실시간 현황</h2>
+    <h2>6. 알림, 실시간 현황, Apple Watch</h2>
     <p>도착 알림과 잠금 화면·다이나믹 아일랜드의 실시간 현황(Live Activity)은 기기 안에서 만들어집니다.
     푸시 알림 서버를 사용하지 않으며, 이를 위해 개인정보를 수집하거나 외부로 전송하지 않습니다.
     알림과 실시간 현황은 iOS 설정에서 언제든지 끌 수 있습니다.</p>
+    <p>Apple Watch 앱이 설치되어 있으면 iPhone 앱은 등록한 역·정류장 목록을 Apple의 WatchConnectivity 기능으로 짝지은 Apple Watch에 직접 전달합니다.
+    위치와 건강 정보는 전달하지 않으며, 이 전달은 개발자 서버를 거치지 않습니다.</p>
 
     <h2>7. 처리 위탁 및 국외 이전</h2>
     <p>앱과 서버 사이의 연결은 보안과 전송을 위해 Cloudflare를 거칩니다. 이 과정에서 접속 IP 주소와 요청 정보가 처리될 수 있습니다.</p>
@@ -269,7 +274,7 @@
     <h2>11. 개인정보처리방침 변경 안내</h2>
     <p>본 방침이 변경될 경우, 변경 내용은 이 페이지에 최신 수정일과 함께 게시됩니다.</p>
     <ul>
-      <li>2026-11-08: 버스 정류장·노선 전송, 기기 내 검색과 목록 저장, 건강 앱 걷기 속도(선택) 반영</li>
+      <li>2026-11-08: 버스 정류장·노선 전송, 기기 내 검색과 목록 저장, 건강 앱 걷기 속도(선택), Apple Watch 앱과 목록 전달 반영</li>
       <li>2026-11-07: 최초 게시</li>
     </ul>
 
@@ -294,6 +299,7 @@
       <li><strong>Location is processed only on your device and is never sent to or stored on a server.</strong></li>
       <li><strong>Walking speed from the Health app is read only if you turn it on in Settings, is used only on your device, and is never sent to a server.</strong></li>
       <li>Only the subway platform and direction, or the bus stop and routes, you look up are sent to the server. Station and stop search runs on a list downloaded to your device, so search terms are not sent. None of this is used to identify you.</li>
+      <li>If you use the Apple Watch app, your list of registered stations and stops is sent only to your paired Apple Watch, never through our server.</li>
       <li>The App contains no ads, analytics, or tracking.</li>
     </ul>
 
@@ -321,7 +327,7 @@
     </ul>
 
     <h2>4. Data Stored Locally on Your Device</h2>
-    <p>The following data is stored only on your device and is never transmitted.</p>
+    <p>The following data is stored only on your devices (your iPhone and, if you use the Apple Watch app, your paired Apple Watch) and is never sent anywhere else, including our server.</p>
     <table>
       <tr><th>Item</th><th>Description</th></tr>
       <tr><td>Registered stations and stops</td><td>Station name, line, and direction, or stop name and routes; alert radius, alert hours, the walking time you entered, and whether the alert is on</td></tr>
@@ -329,8 +335,9 @@
       <tr><td>Station and stop lists, holidays</td><td>Public lists downloaded from our server for search and the map, with their version value. Not personal information.</td></tr>
       <tr><td>Alert history</td><td>The time of the last alert per place, used to avoid repeated alerts</td></tr>
       <tr><td>App settings</td><td>Such as whether the first-run guide was completed</td></tr>
+      <tr><td>List on Apple Watch</td><td>If the Apple Watch app is installed, a copy of the stations and stops you registered on iPhone, and the place and route you chose for a complication</td></tr>
     </table>
-    <p>Uninstalling the App removes all of this data.</p>
+    <p>Uninstalling the App removes all of this data. The list on Apple Watch is removed when you delete the watch app.</p>
 
     <h2>5. Information Sent to Our Server</h2>
     <p>To show arrival information, the App sends the following to a server operated by the developer
@@ -343,13 +350,16 @@
       <tr><td>Station or stop search term</td><td>Only when the list has not been downloaded yet</td><td>Not retained</td></tr>
       <tr><td>IP address</td><td>Counting requests per minute to prevent abuse</td><td>Held in server memory for one minute, then discarded. Not written to files or databases</td></tr>
     </table>
+    <p>The Apple Watch app also sends the subway platform or bus stop and route numbers to the same server to show arrivals. The items and retention are the same as above.</p>
     <p>The server does not receive device identifiers, your location, health data, or your list of registered stations and stops.
     For bus arrivals, the server queries the Seoul Metropolitan Government and Gyeonggi Province public APIs by stop number and passes no information about you.</p>
 
-    <h2>6. Notifications and Live Activities</h2>
+    <h2>6. Notifications, Live Activities, and Apple Watch</h2>
     <p>Arrival notifications and the Live Activity on the Lock Screen and Dynamic Island are created on your device.
     No push notification server is used, and no personal information is collected or transmitted for them.
     You can turn them off at any time in iOS Settings.</p>
+    <p>If the Apple Watch app is installed, the iPhone app sends your list of registered stations and stops directly to your paired
+    Apple Watch using Apple's WatchConnectivity. Location and health data are not sent, and this transfer does not pass through our server.</p>
 
     <h2>7. Processors and International Transfer</h2>
     <p>Connections between the App and the server pass through Cloudflare for delivery and security, which may process your IP address and request information.</p>
@@ -381,7 +391,7 @@
     <h2>11. Changes to This Policy</h2>
     <p>Changes will be posted on this page with the latest update date.</p>
     <ul>
-      <li>2026-11-08: Added bus stop and route lookups, on-device search with downloaded lists, and optional Health app walking speed</li>
+      <li>2026-11-08: Added bus stop and route lookups, on-device search with downloaded lists, optional Health app walking speed, and the Apple Watch app with list transfer to the watch</li>
       <li>2026-11-07: Initial publication</li>
     </ul>
 
